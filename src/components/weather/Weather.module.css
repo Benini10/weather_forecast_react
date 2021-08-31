@@ -13,7 +13,7 @@ img {
 
 .box {
   margin: 1em auto;
-  background: #d8dddf;
+  background: #45bff0;
   padding: 2em 0;
   width: 250px;
   border-radius: 3px;
@@ -36,6 +36,7 @@ img {
   text-align: center;
   display: block;
   font-weight: 100;
+  padding-top: 15px;
 }
 
 .title {

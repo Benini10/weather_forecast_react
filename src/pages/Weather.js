@@ -9,18 +9,18 @@ function Weather(params) {
   useEffect(() => {
     const fetchWeather = async () => {
       const response = await axios.get(
-        "https://api.openweathermap.org/data/2.5/forecast?q=Port-au-Prince,ht&units=metric&lang=fr&cnt=30&appid=de80dc6655fffb93462db4cf5d2f0b70"
+        `https://api.openweathermap.org/data/2.5/forecast?q=Port-au-Prince,ht&units=metric&lang=fr&cnt=30&appid=${process.env.REACT_APP_API_KEY}`
       );
       setCity(response.data.city);
       setListWeather(response.data.list);
+      console.log("API CALLED !");
     };
     fetchWeather();
   }, [setCity, setListWeather]);
 
   return (
     <div>
-      <h3>Weather...</h3>
-      <WeatherList data={listWeather} />
+      <WeatherList city={city} data={listWeather} />
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
+
 function NavBar() {
   return (
     <Navbar bg="dark" variant="dark">
@@ -7,6 +8,9 @@ function NavBar() {
         <Navbar.Brand>React APP</Navbar.Brand>
         <Nav className="me-auto">
           <Link to="/weather">Weather</Link>
+        </Nav>
+        <Nav>
+          <Link to="/">Back</Link>
         </Nav>
       </Container>
     </Navbar>
